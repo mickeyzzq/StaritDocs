@@ -1,0 +1,10 @@
+E:\GitProjects\StaritDocs\StaritManual\bin\x64\Release\StaritManual.exe.config
+E:\GitProjects\StaritDocs\StaritManual\bin\x64\Release\StaritManual.exe
+E:\GitProjects\StaritDocs\StaritManual\bin\x64\Release\StaritManual.pdb
+E:\GitProjects\StaritDocs\StaritManual\obj\x64\Release\StaritManual.FormMain.resources
+E:\GitProjects\StaritDocs\StaritManual\obj\x64\Release\StaritManual.Properties.Resources.resources
+E:\GitProjects\StaritDocs\StaritManual\obj\x64\Release\StaritManual.csproj.GenerateResource.cache
+E:\GitProjects\StaritDocs\StaritManual\obj\x64\Release\StaritManual.csproj.CoreCompileInputs.cache
+E:\GitProjects\StaritDocs\StaritManual\obj\x64\Release\StaritManual.exe
+E:\GitProjects\StaritDocs\StaritManual\obj\x64\Release\StaritManual.pdb
+E:\GitProjects\StaritDocs\StaritManual\obj\x64\Release\StaritManual.csproj.Fody.CopyLocal.cache
