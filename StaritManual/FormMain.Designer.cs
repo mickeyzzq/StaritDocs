@@ -49,7 +49,7 @@
             this.toolStripLabel2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1008, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1184, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -61,6 +61,7 @@
             this.toolBtnHome.Name = "toolBtnHome";
             this.toolBtnHome.Size = new System.Drawing.Size(23, 22);
             this.toolBtnHome.Text = "主页";
+            this.toolBtnHome.Visible = false;
             this.toolBtnHome.Click += new System.EventHandler(this.toolBtnHome_Click);
             // 
             // toolBtnPrev
@@ -71,6 +72,7 @@
             this.toolBtnPrev.Name = "toolBtnPrev";
             this.toolBtnPrev.Size = new System.Drawing.Size(23, 22);
             this.toolBtnPrev.Text = "上一页";
+            this.toolBtnPrev.Visible = false;
             this.toolBtnPrev.Click += new System.EventHandler(this.toolBtnPrev_Click);
             // 
             // toolBtnNext
@@ -81,11 +83,11 @@
             this.toolBtnNext.Name = "toolBtnNext";
             this.toolBtnNext.Size = new System.Drawing.Size(23, 22);
             this.toolBtnNext.Text = "下一页";
+            this.toolBtnNext.Visible = false;
             this.toolBtnNext.Click += new System.EventHandler(this.toolBtnNext_Click);
             // 
             // toolStripLabel1
             // 
-            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel1.AutoSize = false;
             this.toolStripLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
@@ -99,8 +101,9 @@
             this.toolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(104, 22);
-            this.toolStripLabel2.Text = "质控中心  @2020";
+            this.toolStripLabel2.Size = new System.Drawing.Size(156, 22);
+            this.toolStripLabel2.Text = "质控中心  @2020 Ver 1.01";
+            this.toolStripLabel2.DoubleClick += new System.EventHandler(this.toolStripLabel2_DoubleClick);
             // 
             // webBrowser
             // 
@@ -111,7 +114,7 @@
             this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser.Name = "webBrowser";
             this.webBrowser.ScriptErrorsSuppressed = true;
-            this.webBrowser.Size = new System.Drawing.Size(1008, 704);
+            this.webBrowser.Size = new System.Drawing.Size(1184, 704);
             this.webBrowser.TabIndex = 1;
             this.webBrowser.WebBrowserShortcutsEnabled = false;
             this.webBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser_DocumentCompleted);
@@ -122,13 +125,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(1184, 729);
             this.Controls.Add(this.webBrowser);
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "FormMain";
             this.Text = "StaritManual（制度流程标准化手册）";
             this.Load += new System.EventHandler(this.FormMain_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormMain_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormMain_KeyUp);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

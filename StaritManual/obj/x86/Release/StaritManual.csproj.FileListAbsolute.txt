@@ -8,3 +8,4 @@ E:\GitProjects\StaritDocs\StaritManual\obj\x86\Release\StaritManual.exe
 E:\GitProjects\StaritDocs\StaritManual\obj\x86\Release\StaritManual.pdb
 E:\GitProjects\StaritDocs\StaritManual\bin\x86\Release\StaritManual.exe.config
 E:\GitProjects\StaritDocs\StaritManual\obj\x86\Release\StaritManual.csproj.Fody.CopyLocal.cache
+E:\GitProjects\StaritDocs\StaritManual\obj\x86\Release\StaritManual.csprojAssemblyReference.cache
