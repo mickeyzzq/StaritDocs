@@ -15,8 +15,8 @@ namespace StaritManual
     [System.Runtime.InteropServices.ComVisible(true)]
     public partial class FormMain : Form
     {
-        private const string homeUrl = "http://staritmanual.oa.com/web/#/4?page_id=24";
-        //private const string homeUrl = "https://www.showdoc.cc/help?page_id=16118";
+        //private const string homeUrl = "http://staritmanual.oa.com/web/#/4?page_id=24";
+        private const string homeUrl = "https://www.showdoc.cc/help?page_id=16118";
         //private const string homeUrl = "https://www.jianshu.com/p/131ec51356ce";
         private const string testUrl = "https://ie.icoa.cn/";
         //private const string homeUrl = "https://html5test.com/";
@@ -56,8 +56,8 @@ namespace StaritManual
         public void InitializeWebbrowser()
         {
             webBrowser.ScriptErrorsSuppressed = true;
-            webBrowser.ObjectForScripting = this;
-            webBrowser.DocumentCompleted += webBrowser_DocumentCompleted;
+            //webBrowser.ObjectForScripting = this;
+            //webBrowser.DocumentCompleted += webBrowser_DocumentCompleted;
         }
 
         private void GoHome(bool stopLastNavigation = true)
@@ -157,16 +157,16 @@ namespace StaritManual
 
             ((WebBrowser)sender).Document.Window.Error += new HtmlElementErrorEventHandler(Window_Error);
 
-            //将所有的链接的目标，指向本窗体
-            foreach (HtmlElement archor in this.webBrowser.Document.Links)
-            {
-                archor.SetAttribute("target", "_self");
-            }
-            //将所有的FORM的提交目标，指向本窗体
-            foreach (HtmlElement form in this.webBrowser.Document.Forms)
-            {
-                form.SetAttribute("target", "_self");
-            }
+            ////将所有的链接的目标，指向本窗体
+            //foreach (HtmlElement archor in this.webBrowser.Document.Links)
+            //{
+            //    archor.SetAttribute("target", "_self");
+            //}
+            ////将所有的FORM的提交目标，指向本窗体
+            //foreach (HtmlElement form in this.webBrowser.Document.Forms)
+            //{
+            //    form.SetAttribute("target", "_self");
+            //}
         }
 
         private void Window_Error(object sender, HtmlElementErrorEventArgs e)
@@ -175,16 +175,29 @@ namespace StaritManual
             e.Handled = true;
         }
 
-        private void FormMain_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.F7 && e.Modifiers == Keys.Control)
-                GotTestpage();
-        }
+        //private void FormMain_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.F7)
+        //        GotTestpage();
+        //}
 
-        private void FormMain_KeyUp(object sender, KeyEventArgs e)
+        //private void FormMain_KeyUp(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.F7)
+        //        GotTestpage();
+        //}
+
+        protected override bool ProcessDialogKey(Keys keyData)
+
         {
-            if (e.KeyCode == Keys.F7 && e.Modifiers == Keys.Control)
+            if (keyData == (Keys.Control | Keys.D))
+            {
                 GotTestpage();
+                return false;
+            }
+            else
+                return base.ProcessDialogKey(keyData);
+
         }
 
         private void toolStripLabel2_DoubleClick(object sender, EventArgs e)
